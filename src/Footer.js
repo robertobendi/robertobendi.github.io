@@ -34,8 +34,18 @@ function Footer() {
           </div>
         </div>
         
-        <div className="py-6 border-t border-gray-800 text-sm text-gray-400">
-          © {new Date().getFullYear()} Roberto Bendinelli. All rights reserved.
+        <div className="py-6 border-t border-gray-800 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center">
+          <div>
+            © {new Date().getFullYear()} Roberto Bendinelli. All rights reserved.
+          </div>
+          <div className="mt-4 md:mt-0">
+            <a href="https://github.com/robertobendi/RePlate"
+               className="text-gray-400 hover:text-white transition-colors"
+               target="_blank"
+               rel="noopener noreferrer">
+              Made with RePlate, another project by Roberto Bendinelli
+            </a>
+          </div>
         </div>
       </div>
     </footer>
