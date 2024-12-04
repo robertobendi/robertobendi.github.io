@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Home from "./Home";
@@ -8,6 +9,11 @@ import Contact from "./Contact";
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Roberto Bendinelli</title>
+        <meta name="description" content="Personal portfolio of Roberto Bendinelli" />
+        <link rel="icon" href="/favicon.ico" />
+      </Helmet>
       <Navbar />
       <main className="flex-grow">
         <Routes>

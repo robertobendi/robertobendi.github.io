@@ -36,48 +36,90 @@ function Home() {
             z-index: 10;
           }
 
-.face-container {
-    position: sticky;
-    top: 50%;
-    transform: translateY(-64%);
-    width: 100%;
-    height: auto;
-    max-height: 90vh;
-    pointer-events: none;
-    right: -10%; /* This won't work alone with sticky positioning */
-}
+          @media (min-width: 1024px) {
+            .face-container {
+              position: sticky;
+              top: 50%;
+              transform: translateY(-64%);
+              width: 100%;
+              height: auto;
+              max-height: 90vh;
+              pointer-events: none;
+            }
 
-.face-wrapper {
-    position: absolute;
-    right: -4%; /* Adjust this value to move the face right */
-    top: 0;
-    bottom: 0;
-    width: 45%;
-    z-index: 2;
-}
+            .face-wrapper {
+              position: absolute;
+              right: -4%;
+              top: 0;
+              bottom: 0;
+              width: 45%;
+              z-index: 2;
+            }
+          }
+
+          @media (max-width: 1023px) {
+            .face-container {
+              position: relative;
+              width: 100%;
+              height: auto;
+              max-height: 60vh;
+              pointer-events: none;
+              margin-top: 2rem;
+              opacity: 0.3;
+            }
+
+            .face-wrapper {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 80%;
+              z-index: 1;
+            }
+          }
         `}
       </style>
 
       {/* Hero Section */}
       <div className="min-h-screen flex items-center relative">
-        <div className={`w-full max-w-[2000px] mx-auto px-8 lg:px-20 transition-all duration-1000 transform ${
+        <div className={`w-full max-w-[2000px] mx-auto px-4 sm:px-6 lg:px-20 transition-all duration-1000 transform ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
           {/* Content */}
-          <div className="content-container lg:max-w-[50%] lg:text-left text-center">
-            <h1 className="text-6xl lg:text-8xl font-bold mb-6 text-white">
+          <div className="content-container lg:max-w-[50%] lg:text-left text-center relative z-10">
+            <h1 className="text-4xl sm:text-5xl lg:text-8xl font-bold mb-4 sm:mb-6 text-white">
               Roberto Bendinelli
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-400 max-w-2xl lg:mx-0 mx-auto mb-12">
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-400 max-w-2xl lg:mx-0 mx-auto mb-4">
               Building digital experiences that matter
             </p>
-            <div className="flex lg:justify-start justify-center space-x-6">
+            <p className="text-md sm:text-lg lg:text-xl text-blue-400 max-w-2xl lg:mx-0 mx-auto mb-8 sm:mb-12">
+              Currently employed at{' '}
+              <a 
+                href="https://www.cecam.org/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-300 hover:text-blue-200 underline decoration-dotted"
+              >
+                CECAM
+              </a>
+              {' '}at{' '}
+              <a 
+                href="https://www.epfl.ch/en/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-300 hover:text-blue-200 underline decoration-dotted"
+              >
+                EPFL
+              </a>
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
               <Link to="/projects" 
-                className="px-8 py-4 border-2 border-white text-white rounded hover:bg-white hover:text-black transition-all duration-300">
+                className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded hover:bg-white hover:text-black transition-all duration-300">
                 View My Work
               </Link>
               <Link to="/contact" 
-                className="px-8 py-4 bg-white text-black rounded hover:bg-opacity-90 transition-all duration-300">
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded hover:bg-opacity-90 transition-all duration-300">
                 Get in Touch
               </Link>
             </div>
@@ -92,7 +134,7 @@ function Home() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M119.616 490.246C110.45 551.174 109.175 615.68 95.6463 675.735C84.902 723.429 76.024 772.857 72.9672 821.766C69.9748 869.644 78.4909 910.073 93.0649 956.918C105.965 998.383 118.289 1039.19 128.835 1081.38C138.651 1120.64 154.077 1157.91 164.421 1196.98C171.797 1224.85 182.997 1257.55 195.95 1283.46C203.208 1297.98 215.192 1318.06 227.664 1328.26C261.359 1355.83 299.531 1345.43 338.663 1353.89C375.024 1361.76 421.583 1370.18 458.88 1362.38C480.716 1357.81 498.987 1329.6 516.223 1316.83C543.999 1296.26 571.898 1274.12 594.217 1247.69C627.216 1208.61 678.181 1189.54 713.697 1154.02" stroke="white" stroke-width="20" stroke-linecap="round"/>
+<path d="M119.616 490.246C110.45 551.174 109.175 615.68 95.6463 675.735C84.902 723.429 76.024 772.857 72.9672 821.766C69.9748 869.644 78.4909 910.073 93.0649 956.918C105.965 998.383 118.289 1039.19 128.835 1081.38C138.651 1120.64 154.077 1157.91 164.421 1196.98C171.797 1224.85 182.997 1257.55 195.95 1283.46C203.208 1297.98 215.192 1318.06 227.664 1328.26C261.359 1355.83 299.531 1345.43 338.663 1353.89C375.024 1361.76 421.583 1370.18 458.88 1362.38C480.716 1357.81 498.987 1329.6 516.223 1316.83C543.999 1296.26 571.898 1274.12 594.217 1247.69C627.216 1208.61 678.181 1189.54 713.697 1154.02" stroke="white" stroke-width="20" stroke-linecap="round"/>
 <path d="M259.01 732.525C230.027 718.796 199.608 707.46 169.584 696.201C159.491 692.416 118.697 676.472 119.063 676.472C155.032 676.472 190.904 688.936 222.871 704.498C226.522 706.276 235.183 711.294 224.715 706.342C206.052 697.515 187.242 689.799 167.556 683.479C144.191 675.977 119.676 669.584 95.2779 666.331C89.8834 665.612 67.0932 663.757 83.6618 668.544C110.598 676.325 136.894 685.769 163.868 693.435C172.613 695.921 186.562 699.904 192.632 705.973" stroke="white" stroke-width="20" stroke-linecap="round"/>
 <path d="M132.895 752.438C165.905 752.674 197.338 750.935 227.667 764.976C232.578 767.249 260.213 777.776 238.73 774.195C212.36 769.8 186.046 752.438 159.446 752.438" stroke="white" stroke-width="20" stroke-linecap="round"/>
 <path d="M159.445 752.438C159.549 761.37 161.288 787.236 164.239 778.805C165.066 776.443 166.083 762.259 166.083 766.451C166.083 773.977 161.129 802.221 171.246 802.221C176.449 802.221 181.766 801.918 185.259 797.427C190.424 790.786 192.828 766.752 195.953 774.564C200.573 786.113 187.368 764.564 185.996 759.076" stroke="white" stroke-width="20" stroke-linecap="round"/>

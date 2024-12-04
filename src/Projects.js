@@ -1,35 +1,40 @@
 import React from 'react';
+import ProjectCard from './ProjectCard';
 
-function Projects() {
+const Projects = () => {
+  const projects = [
+    {
+      title: "Lhumos Platform",
+      description: "A comprehensive video platform for scientific content, featuring dynamic slide synchronization, playlist management, and integrated file sharing. Built for CECAM and MARVEL, Lhumos provides an advanced interface for educational and research content delivery.",
+      technologies: ["React", "React Router", "Video.js", "React Slick", "REST API"],
+      imageUrl: "https://dome40.eu/sites/default/files/inline-images/EPFL%20Blog%20Post%202.png", // Replace with actual Lhumos screenshot
+      liveUrl: "https://alpha.lhumos.org/", // Replace with actual URL
+    },
+    // Add other projects as needed
+  ];
+
   return (
-    <div className="min-h-screen bg-black text-white pt-32 px-8 lg:px-20">
-      <div className="max-w-[2000px] mx-auto">
-        <h1 className="text-5xl lg:text-6xl font-bold mb-12">Projects</h1>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Example Project Card - Repeat as needed */}
-          <div className="bg-gray-900/50 rounded-lg overflow-hidden group">
-            <div className="aspect-video relative overflow-hidden">
-              <img 
-                src="/api/placeholder/600/400" 
-                alt="Project Preview"
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">Project Name</h3>
-              <p className="text-gray-400 mb-4">Brief description of the project goes here. What problems it solves and what technologies were used.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-white/10 rounded-full text-sm">React</span>
-                <span className="px-3 py-1 bg-white/10 rounded-full text-sm">Node.js</span>
-                <span className="px-3 py-1 bg-white/10 rounded-full text-sm">MongoDB</span>
-              </div>
-            </div>
-          </div>
+    <div className="min-h-screen bg-black py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            My Projects
+          </h1>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            A collection of my work, featuring web applications and design projects.
+          </p>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Projects;
