@@ -25,7 +25,7 @@ function Footer() {
                rel="noopener noreferrer">
               LinkedIn
             </a>
-            <a href="https://twitter.com/robertobendi" 
+            <a href="https://twitter.com/robbendinelli" 
                className="text-gray-400 hover:text-white transition-colors"
                target="_blank"
                rel="noopener noreferrer">
