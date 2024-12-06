@@ -14,7 +14,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md' : 'bg-transparent'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 border-b border-transparent ${scrolled ? 'bg-gray-900/60 backdrop-blur-xl border-gray-800/50' : 'bg-transparent'}`}>
       <div className="max-w-[2000px] mx-auto px-8 lg:px-20">
         <div className="flex items-center h-20 space-x-12">
           <Link to="/" className="font-bold text-2xl text-white shrink-0">
@@ -22,17 +22,17 @@ function Navbar() {
           </Link>
 
           <div className="hidden md:flex space-x-8">
-            <Link to="/projects" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/projects" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
               Projects
             </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/contact" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
               Contact
             </Link>
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden ml-auto text-white"
+            className="md:hidden ml-auto text-gray-400 hover:text-blue-400 transition-colors duration-300"
           >
             <span className="sr-only">Open menu</span>
             {isOpen ? (
@@ -48,12 +48,12 @@ function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden absolute left-0 right-0 bg-black/95 backdrop-blur-md">
+          <div className="md:hidden absolute left-0 right-0 bg-gray-900/60 backdrop-blur-xl border-b border-gray-800/50">
             <div className="flex flex-col space-y-4 px-8 py-6">
-              <Link to="/projects" className="text-gray-300 hover:text-white transition-colors" onClick={() => setIsOpen(false)}>
+              <Link to="/projects" className="text-gray-400 hover:text-blue-400 transition-colors duration-300" onClick={() => setIsOpen(false)}>
                 Projects
               </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors" onClick={() => setIsOpen(false)}>
+              <Link to="/contact" className="text-gray-400 hover:text-blue-400 transition-colors duration-300" onClick={() => setIsOpen(false)}>
                 Contact
               </Link>
             </div>
