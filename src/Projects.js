@@ -19,6 +19,13 @@ const Projects = () => {
       imageUrl: "https://i.ibb.co/6wPD9KW/Screenshot-2024-12-06-100819.png",
       liveUrl: "https://youtu.be/otlmxsq-IIc",
     },
+    {
+      title: "RePlate",
+      description: "A minimal, modern React.js template designed to jumpstart web projects. Features a clean, well-organized foundation with essential components pre-configured, including responsive navigation, modern footer, and contact form. Implements best practices for project structure and developer experience.",
+      technologies: ["React 17", "Tailwind CSS", "PostCSS", "Autoprefixer"],
+      imageUrl: "https://i.ibb.co/rvz38sW/Screenshot-2024-12-06-121024.png",
+      liveUrl: "https://github.com/robertobendi/RePlate",
+    },
   ];
 
   const containerVariants = {
