@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
+import ViewCounter from './ViewCounter';
 
 function Footer() {
   return (
-    <footer className="bg-black text-white border-t border-gray-800">
+    <footer className="bg-gray-900/30 backdrop-blur-sm text-white border-t border-gray-800/50">
       <div className="max-w-[2000px] mx-auto px-8 lg:px-20">
         <div className="py-12 flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
@@ -14,19 +15,19 @@ function Footer() {
           
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
             <a href="https://github.com/robertobendi" 
-               className="text-gray-400 hover:text-white transition-colors"
+               className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
                target="_blank"
                rel="noopener noreferrer">
               GitHub
             </a>
             <a href="https://linkedin.com/in/robertobendi" 
-               className="text-gray-400 hover:text-white transition-colors"
+               className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
                target="_blank"
                rel="noopener noreferrer">
               LinkedIn
             </a>
             <a href="https://twitter.com/robbendinelli" 
-               className="text-gray-400 hover:text-white transition-colors"
+               className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
                target="_blank"
                rel="noopener noreferrer">
               Twitter
@@ -34,13 +35,14 @@ function Footer() {
           </div>
         </div>
         
-        <div className="py-6 border-t border-gray-800 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center">
-          <div>
+        <div className="py-6 border-t border-gray-800/50 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center gap-4">
             © {new Date().getFullYear()} Roberto Bendinelli. All rights reserved.
+            <ViewCounter />
           </div>
           <div className="mt-4 md:mt-0">
             <a href="https://github.com/robertobendi/RePlate"
-               className="text-gray-400 hover:text-white transition-colors"
+               className="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:underline"
                target="_blank"
                rel="noopener noreferrer">
               Made with RePlate, another project by Roberto Bendinelli
