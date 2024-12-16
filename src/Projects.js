@@ -64,10 +64,10 @@ const Projects = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-              My Projects
+              Projects Portfolio
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              A collection of my work, featuring web applications and design projects.
+              Exploring the intersection of research, technology, and innovation through transformative digital solutions.
             </p>
           </motion.div>
 

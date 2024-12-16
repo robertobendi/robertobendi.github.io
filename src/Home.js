@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { 
+  Code2, Laptop, BrainCircuit, Gamepad, 
+  Globe, Rocket, MonitorPlay, Command,
+  MessageSquare, Building2, Film, 
+  Terminal, Database, Smartphone
+} from "lucide-react";
 import MovingBackground from "./MovingBackground";
 
 function Home() {
@@ -9,169 +15,165 @@ function Home() {
     setIsVisible(true);
   }, []);
 
-  return (
-    <div className="min-h-screen text-white overflow-hidden relative">
-      {/* Add MovingBackground component */}
-      <MovingBackground />
+  const services = [
+    {
+      icon: <Code2 className="w-6 h-6" />,
+      title: "Web Applications",
+      description: "Custom web solutions with modern frameworks and seamless user experiences",
+    },
+    {
+      icon: <Smartphone className="w-6 h-6" />,
+      title: "Mobile Apps",
+      description: "Native and cross-platform mobile applications for iOS and Android",
+    },
+    {
+      icon: <Laptop className="w-6 h-6" />,
+      title: "Desktop Software",
+      description: "Powerful desktop applications for Windows, macOS, and Linux",
+    },
+    {
+      icon: <BrainCircuit className="w-6 h-6" />,
+      title: "VR Solutions",
+      description: "Immersive virtual reality experiences and applications",
+    },
+    {
+      icon: <Database className="w-6 h-6" />,
+      title: "Backend Systems",
+      description: "Scalable server architecture and database solutions",
+    },
+    {
+      icon: <Terminal className="w-6 h-6" />,
+      title: "Technical Consulting",
+      description: "Expert guidance on architecture, technology stack, and best practices",
+    }
+  ];
 
+  return (
+    <div className="relative text-white">
+      <MovingBackground />
+      
       <style>
         {`
-          @keyframes drawPath {
-            0% {
-              stroke-dasharray: 2000;
-              stroke-dashoffset: 2000;
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
             }
-            100% {
-              stroke-dasharray: 2000;
-              stroke-dashoffset: 0;
-            }
-          }
-
-          .face-logo path {
-            stroke: white;
-            stroke-width: 16;
-            stroke-linecap: round;
-            fill: none;
-            animation: drawPath 2.5s ease-out forwards;
-          }
-
-          .content-container {
-            position: relative;
-            z-index: 10;
-          }
-
-          @media (min-width: 1024px) {
-            .face-container {
-              position: sticky;
-              top: 50%;
-              transform: translateY(-64%);
-              width: 120%;
-              height: auto;
-              max-height: 90vh;
-              pointer-events: none;
-            }
-
-            .face-wrapper {
-              position: absolute;
-              right: -10%;
-              top: 0;
-              bottom: 0;
-              width: 45%;
-              z-index: 2;
+            to {
+              opacity: 1;
+              transform: translateY(0);
             }
           }
 
-          @media (max-width: 1023px) {
-            .face-container {
-              position: relative;
-              width: 100%;
-              height: auto;
-              pointer-events: none;
-              margin-top: 2rem;
-            }
+          @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+          }
 
-            .face-wrapper {
-              position: relative;
-              width: 100%;
-              padding-top: 100%; /* 1:1 Aspect Ratio */
-              z-index: 1;
-            }
+          .gradient-text {
+            background: linear-gradient(135deg, #60A5FA 0%, #A78BFA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
 
-            .face-logo {
-              position: absolute; 
-              top: 0;
-              left: 0;
-              bottom: 0;
-              right: 0;
-              width: 100%;
-              height: 100%;
-            }
+          .highlight-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+          }
+
+          .highlight-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+          }
+
+          .service-card {
+            animation: fadeInUp 0.5s ease-out;
+            transition: all 0.3s ease;
+          }
+
+          .service-card:hover {
+            transform: translateY(-5px) scale(1.02);
+          }
+
+          .floating-element {
+            animation: float 3s ease-in-out infinite;
           }
         `}
       </style>
 
-      {/* Hero Section */}
-      <div className="min-h-screen flex items-center relative">
-        <div
-          className={`w-full max-w-[2000px] mx-auto px-4 sm:px-6 lg:px-20 transition-all duration-1000 transform ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
-          {/* Content */}
-          <div className="content-container lg:max-w-[50%] lg:text-left text-center relative z-10">
-            <h1 className="text-4xl sm:text-5xl lg:text-8xl font-bold mb-4 sm:mb-6 text-white">
-              Roberto Bendinelli
+      <div className="min-h-screen relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 lg:pt-40">
+          {/* Hero Section */}
+          <div className="text-center max-w-3xl mx-auto" style={{ animation: 'fadeInUp 1s ease-out' }}>
+            <div className="mb-6 flex items-center justify-center space-x-2">
+              <Command className="w-8 h-8 text-blue-400" />
+              <span className="text-xl text-blue-400">robendi.com</span>
+            </div>
+            <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+              <span className="gradient-text">Digital</span>{" "}
+              <span className="text-white">Innovation</span>
             </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-400 max-w-2xl lg:mx-0 mx-auto mb-4">
-              Building digital experiences that matter
+            <h2 className="text-xl lg:text-2xl text-blue-400 font-semibold mb-6">
+              Transforming Ideas into Digital Reality
+            </h2>
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+              Specializing in custom software development, from web and mobile applications 
+              to immersive VR experiences. Solving complex technical challenges with elegant solutions.
             </p>
-            <p className="text-md sm:text-lg lg:text-xl text-blue-400 max-w-2xl lg:mx-0 mx-auto mb-8 sm:mb-12">
-              Currently employed at{" "}
-              <a
-                href="https://www.cecam.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-300 hover:text-blue-200 underline decoration-dotted"
-              >
-                CECAM
-              </a>{" "}
-              at{" "}
-              <a
-                href="https://www.epfl.ch/en/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-300 hover:text-blue-200 underline decoration-dotted"
-              >
-                EPFL
-              </a>
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
               <Link
                 to="/projects"
-                className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded hover:bg-white hover:text-black transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105"
               >
-                View My Work
+                <span className="flex items-center gap-2">
+                  <MonitorPlay className="w-5 h-5" />
+                  View Projects
+                </span>
               </Link>
               <Link
                 to="/contact"
-                className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded hover:bg-opacity-90 transition-all duration-300"
+                className="px-8 py-4 border-2 border-white rounded-lg text-white hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105"
               >
-                Get in Touch
+                <span className="flex items-center gap-2">
+                  <MessageSquare className="w-5 h-5" />
+                  Start a Project
+                </span>
               </Link>
+            </div>
+
+            {/* Stats Section */}
+            <div className="flex justify-center items-center space-x-8 mb-16">
+              <div className="text-center floating-element">
+                <div className="text-3xl font-bold gradient-text mb-1">100+</div>
+                <div className="text-sm text-gray-400">Projects Delivered</div>
+              </div>
+              <div className="text-center floating-element" style={{ animationDelay: '0.2s' }}>
+                <div className="text-3xl font-bold gradient-text mb-1">8+</div>
+                <div className="text-sm text-gray-400">Years Experience</div>
+              </div>
+              <div className="text-center floating-element" style={{ animationDelay: '0.4s' }}>
+                <div className="text-3xl font-bold gradient-text mb-1">15+</div>
+                <div className="text-sm text-gray-400">Technologies</div>
+              </div>
             </div>
           </div>
 
-          {/* Face SVG */}
-          <div className="face-wrapper">
-            <div className="face-container">
-              <svg
-                className="face-logo"
-                viewBox="0 0 1027 1376"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+          {/* Services Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="service-card highlight-card rounded-xl p-8"
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
-<path d="M119.616 490.246C110.45 551.174 109.175 615.68 95.6463 675.735C84.902 723.429 76.024 772.857 72.9672 821.766C69.9748 869.644 78.4909 910.073 93.0649 956.918C105.965 998.383 118.289 1039.19 128.835 1081.38C138.651 1120.64 154.077 1157.91 164.421 1196.98C171.797 1224.85 182.997 1257.55 195.95 1283.46C203.208 1297.98 215.192 1318.06 227.664 1328.26C261.359 1355.83 299.531 1345.43 338.663 1353.89C375.024 1361.76 421.583 1370.18 458.88 1362.38C480.716 1357.81 498.987 1329.6 516.223 1316.83C543.999 1296.26 571.898 1274.12 594.217 1247.69C627.216 1208.61 678.181 1189.54 713.697 1154.02" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M259.01 732.525C230.027 718.796 199.608 707.46 169.584 696.201C159.491 692.416 118.697 676.472 119.063 676.472C155.032 676.472 190.904 688.936 222.871 704.498C226.522 706.276 235.183 711.294 224.715 706.342C206.052 697.515 187.242 689.799 167.556 683.479C144.191 675.977 119.676 669.584 95.2779 666.331C89.8834 665.612 67.0932 663.757 83.6618 668.544C110.598 676.325 136.894 685.769 163.868 693.435C172.613 695.921 186.562 699.904 192.632 705.973" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M132.895 752.438C165.905 752.674 197.338 750.935 227.667 764.976C232.578 767.249 260.213 777.776 238.73 774.195C212.36 769.8 186.046 752.438 159.446 752.438" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M159.445 752.438C159.549 761.37 161.288 787.236 164.239 778.805C165.066 776.443 166.083 762.259 166.083 766.451C166.083 773.977 161.129 802.221 171.246 802.221C176.449 802.221 181.766 801.918 185.259 797.427C190.424 790.786 192.828 766.752 195.953 774.564C200.573 786.113 187.368 764.564 185.996 759.076" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M285.563 765.713C283.841 812.218 289.727 857.94 265.65 898.284C242.101 937.746 223.527 978.988 205.91 1021.27" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M205.91 1021.27C214.288 1043.38 217.008 1053.51 237.624 1062.94C253.072 1070 278.719 1064.41 295.52 1064.41" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M325.387 1064.41C334.288 1065.01 343.103 1066.55 351.938 1067.73" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M212.547 1147.39C264.518 1157.89 310.945 1187.35 364.847 1190.35C394.722 1192.01 429.99 1191.1 458.144 1200.49" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M312.113 1130.79C340.027 1137.56 366.909 1153.09 391.767 1167.3" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M195.953 1140.75H242.418" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M199.27 1157.34C229.315 1167.95 252.171 1193.78 282.242 1203.81" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M56.5569 420.549C61.447 464.848 61.5876 515.544 75.7327 558.467C77.7429 564.567 82.7392 569.428 82.7392 576.168C82.7392 595.125 75.0076 613.247 68.7261 630.745C67.39 634.467 63.0554 660.462 58.2163 661.537C42.0428 665.131 39.7456 529.448 39.9624 517.903C40.477 490.505 46.2392 451.52 69.8324 433.825" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M126.254 503.521C139.781 488.047 172.809 439.314 171.612 488.402C170.918 516.845 172.733 539.101 183.966 565.474C186.475 571.366 189.306 582.43 194.107 587.231C195.92 589.044 194.634 563.058 194.475 561.786C188.213 511.69 186.838 454.602 230.061 419.812C247.471 405.799 255.18 405.516 276.341 414.649C311.934 430.01 348.697 441.247 385.496 453.369C410.742 461.686 431.572 473.642 455.192 485.452C476.292 496.002 498.381 504.55 519.358 515.322C561.413 536.918 570.52 588.508 599.195 622.079C601.049 624.25 638.135 651.838 633.306 633.327C618.516 576.631 571.228 518.055 527.655 480.105C518.515 472.144 522.106 483.323 523.23 489.693C526.899 510.489 533.718 530.261 541.115 549.986C552.908 581.434 564.01 620.638 587.579 645.68C603.836 662.954 625.846 674.933 644 690.117C647.646 693.166 654.329 702.752 659.12 703.761C663.702 704.726 654.817 662.925 654.694 662.459C647.388 634.695 638.364 607.445 633.306 579.118C632.591 575.114 626.68 549.263 631.462 544.823C635.203 541.349 667.48 582.968 669.076 584.834C687.313 606.154 706.743 624.14 728.079 642.177C748.467 659.413 750.205 669.322 750.205 694.542C750.205 739.007 746.864 785.025 753.523 829.141C755.494 842.195 755.107 859.98 763.849 839.098C781.661 796.546 794.56 752.615 811.051 709.661C812.351 706.276 817.564 688.983 819.164 703.023C821.693 725.229 819.901 748.385 819.901 770.692C819.901 776.11 819.154 819.155 819.901 791.527C820.346 775.062 827.741 756.383 842.949 747.828C858.715 738.96 867.779 779.03 869.131 788.946C876.151 840.42 866.32 890.973 828.383 927.601C822.491 933.29 818.163 934.203 810.498 935.161C803.717 936.009 803.5 951.531 802.569 955.996C796.584 984.725 793.35 1012.13 793.35 1041.37C793.35 1067.48 796.669 1092.81 796.669 1118.99C796.669 1126.24 793.034 1150.55 799.988 1154.02" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M859.74 878.556C882.414 821.759 905.069 764.962 926.855 707.818C930.426 698.453 933.677 670.827 940.131 663.566C942.346 661.074 943.098 673.759 942.712 659.879C941.866 629.401 936.382 599.416 936.075 568.794C935.872 548.663 934.602 527.699 936.075 507.579C936.832 497.224 954.063 532.007 954.882 533.761C962.032 549.084 968.949 564.495 975.164 580.225C978.384 588.378 977.141 608.191 985.12 604.564C990.978 601.901 981.115 513.134 980.511 505.55C977.996 473.977 969.43 443.611 966.129 412.253C964.269 394.585 963.61 377.327 955.988 360.994C951.563 351.514 945.48 344.402 939.578 335.918C936.719 331.808 925.017 321.925 932.387 329.096C943.063 339.484 957.55 348.107 971.107 354.172C983.624 359.772 963.752 317.98 963.363 317.296C954.487 301.673 943.243 287.778 932.571 273.413C928.863 268.421 941.204 282.372 945.294 287.057C953.453 296.404 961.304 306.382 970.37 314.899C973.911 318.225 985.477 324.196 984.198 319.508C975.763 288.578 918.604 266.065 893.298 255.712C854.662 239.906 813.64 227.254 774.002 214.041C766.111 211.411 751.407 208.354 770.13 208.141C801.896 207.78 833.959 208.572 865.64 210.723C903.331 213.281 940.73 217.897 977.376 227.317C990.148 230.6 1022.75 249.303 1015.36 238.38C996.331 210.251 954.432 188.596 925.749 174.215C874.536 148.536 810.496 117.086 751.323 129.594C713.963 137.492 683.947 164.928 659.501 192.653C656.383 196.189 647.999 206.36 648.622 201.688C650.431 188.121 676.861 180.003 686.052 176.243C722.41 161.369 759.115 147.475 795.391 132.36C798.518 131.057 819.713 118.447 802.213 123.878C747.635 140.816 697.177 169.238 641.062 181.774C599.408 191.08 623.468 137.198 631.843 115.212C638.912 96.6563 645.279 87.3393 635.531 114.106C630.017 129.246 623.883 147.343 613.221 159.833C604.181 170.422 586.147 150.026 580.585 145.82C555.815 127.088 531.412 107.608 504.251 92.3489C500.463 90.2212 496.491 88.4125 492.45 86.8175C491.073 86.274 494.435 89.1271 495.769 89.7676C583.696 131.973 678.23 173.643 751.508 239.486C774.74 260.362 809.504 304.355 784.881 336.471C765.722 361.461 719.636 361.497 692.69 351.591C660.42 339.727 681.67 283.257 685.13 259.768C690.473 223.493 692.418 174.371 662.82 146.373C652.413 136.529 647.357 154.34 646.225 161.677C641.105 194.88 649.234 229.133 659.869 260.321C673.22 299.472 692.785 336.056 711.128 372.979C719.201 389.23 729.017 406.003 732.701 424.053C741.167 465.538 636.166 406.73 634.609 405.984C576.315 378.035 517.139 347.053 464.793 308.814C446.537 295.478 405.381 262.504 420.172 232.48C431.195 210.105 476.573 216.005 493.188 217.176C535.803 220.18 581.783 227.879 619.305 249.812C673.911 281.73 699.312 353.635 667.245 410.593C638.802 461.114 588.456 464.262 547.765 427.925C525.887 408.388 506.068 383.661 491.159 358.413C474.524 330.24 489.567 324.712 518.079 328.174C655.832 344.901 745.667 468.484 784.328 591.288C787.651 601.843 790.044 610.1 790.044 621.158C790.044 624.108 790.51 632.922 790.044 630.009C785.935 604.329 773.8 581.435 761.28 558.837C726.241 495.592 684.724 436.498 652.125 371.873C636.708 341.308 664.253 372.951 672.776 381.83C712.959 423.686 757.831 465.233 792.256 512.004C811.539 538.202 821.867 563.82 806.454 594.054C795.708 615.132 779.381 631.589 763.677 648.078C750.979 661.41 755.541 671.784 760.358 688.642C761.35 692.116 772.944 750.964 774.187 750.964C777.558 750.964 790.499 707.383 791.519 704.868C810.98 656.882 836.569 612.72 861.215 567.318C861.229 567.293 883.257 522.896 886.291 526.386C891.001 531.801 892.057 547.616 892.745 553.121C896.918 586.508 896.576 620.651 894.22 654.163C893.585 663.196 886.291 709.255 886.291 707.081C886.291 659.351 897.776 612.528 898.276 564.737C898.972 498.238 886.094 418.375 835.402 370.398C795.727 332.849 733.858 321.541 686.421 349.747C678.565 354.418 668.662 362.596 677.939 371.873C690.708 384.642 677.393 333.24 676.464 331.678C644.212 277.449 553.251 268.88 497.244 271.2C438.398 273.637 457.204 328.666 481.018 361.916C510.672 403.319 557.921 434.425 601.605 459.27C606.579 462.099 640.346 476.366 616.724 463.327C547.301 425.005 469.924 394.179 393.99 371.873C359.954 361.875 277.971 333.248 242.427 359.519C226.316 371.428 272.613 407.38 278.013 411.7C326.087 450.158 378.83 479.768 437.873 497.437C447.505 500.32 481.887 515.574 493.925 509.238C522.578 494.158 555.08 474.284 579.847 453.739C617.201 422.752 641.511 371.171 658.763 326.884C677.387 279.077 671.072 235.78 627.418 203.347C553.45 148.392 452.113 176.59 373.708 205.56C313.044 227.974 241.398 268.906 249.065 343.662C250.546 358.104 241.847 356.191 226.202 361.732C184.848 376.378 134.546 387.06 98.7933 413.543C94.144 416.987 89.4548 426.809 84.5959 429.4C76.9973 433.453 89.478 412.798 93.2618 405.062C105.52 380 121.579 358.725 141.017 338.684C164.558 314.413 197.179 294.347 216.245 266.037C233.636 240.214 176.345 248.107 167.568 248.705C133.325 251.04 96.7494 255.597 69.2921 278.575C41.3906 301.926 34.7762 336.18 31.4937 370.398C29.516 391.014 30.0186 412.357 30.0186 433.088C30.0186 435.595 29.0992 428.157 28.5436 425.713C22.0915 397.324 -3.93653 359.561 19.8776 332.968C36.3628 314.56 64.8207 304.854 87.1772 297.014C124.201 284.03 162.34 275.392 201.31 271.016C204.786 270.625 294.697 273.16 264.738 256.818C214.185 229.244 152.825 227.331 96.7651 224.551C93.0034 224.365 24.7216 216.115 42.5566 210.723C95.0312 194.858 158.955 201.635 212.926 201.503C245.131 201.425 277.338 201.503 309.543 201.503C314.959 201.503 333.191 203.742 339.781 200.766C352.746 194.911 279.386 151.755 279.304 151.72C197.504 117.15 256.881 103.865 167.567 112.262C154.298 113.51 86.8047 164.316 141.005 159.833C236.503 151.935 173.648 92.1923 269.347 101.384C310.686 105.354 345.075 123.039 376.842 148.954C399.023 167.049 362.113 146.492 358.588 144.714C329.743 130.163 300.065 117.963 270.085 105.993C262.135 102.819 241.565 95.3677 249.065 91.2426C278.964 74.7983 323.857 62.0662 358.035 63.5853C392.874 65.1336 423.589 89.7476 448.198 112.262C479.516 140.914 429.416 96.3473 424.229 92.7177C365.012 51.2875 359.504 97.2398 295.53 63.5851C280.827 55.8507 308.818 -3.10814 358.035 13.5001C436.172 39.8672 379.138 31.4007 444.879 81.6547C463.475 95.8697 475.051 111.466 484.337 132.36C494.702 155.68 462.76 82.4125 468.296 57.5006C468.658 55.8708 528.3 102.984 532.645 106.546C551.357 121.887 570.66 136.465 589.435 151.72C598.287 158.912 616.988 183.615 628.524 186.384C637.116 188.446 620.846 170.32 615.433 163.336C601.732 145.658 586.202 129.479 572.841 111.525C564.731 100.626 542.143 60.6674 569.153 92.3489C599.924 128.441 632.39 162.87 663.557 198.553C665.98 201.327 676.98 216.582 665.032 212.013C614.713 192.774 566.492 185.875 512.363 183.987C441.251 181.506 355.615 176.247 295.53 221.786C276.648 236.096 257.813 255.201 245.931 275.994C245.181 277.307 243.267 281.422 243.902 280.05C251.251 264.193 258.155 247.349 261.972 230.267C267.747 204.424 264.591 177.954 235.79 169.79C184.903 155.365 128.626 198.203 91.6024 226.948C72.0305 242.144 30.7609 273.379 26.6997 301.808C25.1277 312.812 26.6997 325.183 26.6997 336.287C26.6997 345.86 24.3241 363.536 30.3874 371.873C38.2617 382.7 166.594 308.301 173.653 304.942C218.015 283.832 262.888 264.524 309.543 249.074C318.916 245.97 337.528 238.042 348.632 237.458C356.591 237.039 314.953 300.459 312.124 304.389" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M378.492 749.119C396.574 758.913 431.656 743.357 452.061 742.666C479.583 741.733 507.189 742.647 534.664 744.141C560.943 745.569 587.105 745.8 613.396 745.8C628.798 745.8 636.98 743.385 613.396 740.822C568.315 735.922 520.858 738.272 475.477 739.162C461.776 739.431 450.071 746.017 436.941 748.935C424.707 751.653 412.447 751.658 400.249 754.097C397.766 754.594 383.996 759.885 385.867 755.019C389.017 746.83 399.055 736.266 408.362 735.843C457.264 733.621 509.363 736.243 557.896 740.822C572.876 742.235 601.766 735.547 610.814 749.119" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M421.637 815.497C465.065 792.022 496.103 799.481 544.067 809.965C565.926 814.743 585.971 820.671 607.494 825.453" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M474.737 805.54C472.525 813.28 467.018 825.198 476.396 830.247C481.993 833.261 488.039 832.896 490.593 826.191C499.494 802.828 479.219 808.809 482.112 819.553C484.843 829.698 493.018 830.901 502.763 828.035C514.394 824.614 514.352 797.875 502.763 795.768C487.694 793.028 471.418 807.638 471.418 821.766C471.418 838.265 486.02 836.206 499.259 835.226C513.355 834.182 516.085 811.62 509.4 801.115C503.538 791.902 478.192 800.459 471.418 805.54" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M195.951 778.989C194.49 786.853 190.588 807.663 197.057 802.959C199.534 801.158 199.27 798.203 199.27 795.584" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M444.87 1014.63C444.87 998.267 445.364 1007 441.551 1014.63" stroke="white" stroke-width="20" stroke-linecap="round"/>
-<path d="M561.027 964.847C564.367 974.448 566.328 970.816 561.027 968.166" stroke="white" stroke-width="20" stroke-linecap="round"/>
-              </svg>
-            </div>
+                <div className="text-blue-400 mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                <p className="text-gray-300">{service.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
