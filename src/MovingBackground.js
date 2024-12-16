@@ -7,7 +7,19 @@ import {
   Code2,
   Box,
   Workflow,
-  Palette
+  Palette,
+  Laptop,
+  BrainCircuit,
+  Gamepad,
+  Rocket,
+  MonitorPlay,
+  Command,
+  MessageSquare,
+  Building2,
+  Film,
+  Terminal,
+  Database,
+  Smartphone
 } from 'lucide-react';
 
 const MovingBackground = () => {
@@ -37,7 +49,9 @@ const MovingBackground = () => {
     })));
 
     const iconComponents = [
-      Gamepad2, Glasses, Globe, Brain, Code2, Box, Workflow, Palette
+      Gamepad2, Glasses, Globe, Brain, Code2, Box, Workflow, Palette,
+      Laptop, BrainCircuit, Gamepad, Rocket, MonitorPlay, Command,
+      MessageSquare, Building2, Film, Terminal, Database, Smartphone
     ];
     
     setIcons(Array.from({ length: 12 }, () => ({

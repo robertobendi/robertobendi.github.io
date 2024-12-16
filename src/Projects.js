@@ -52,10 +52,10 @@ const Projects = () => {
   };
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen pt-20 md:pt-0">
       <MovingBackground />
       
-      <div className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 py-12 md:py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: -20 }}

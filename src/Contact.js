@@ -10,10 +10,10 @@ function Contact() {
   }, []);
 
   return (
-    <div className="min-h-screen text-white relative flex items-center justify-center">
+    <div className="min-h-screen text-white relative flex items-center justify-center pt-20 md:pt-0">
       <MovingBackground />
       
-      <div className="relative z-10 w-full max-w-4xl px-8">
+      <div className="relative z-10 w-full max-w-4xl px-8 py-12 md:py-0">
         <div 
           className={`text-center transition-all duration-1000 transform ${
             isVisible 
@@ -21,7 +21,7 @@ function Contact() {
               : "translate-y-10 opacity-0 rotate-3"
           }`}
         >
-          <h1 className="text-6xl lg:text-7xl font-bold mb-16 hover:scale-105 transition-transform duration-300">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-16 hover:scale-105 transition-transform duration-300">
             Let's Connect
           </h1>
 
@@ -30,7 +30,7 @@ function Contact() {
             <div className="space-y-6">
               {/* Email Container */}
               <div 
-                className="group bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:bg-white/10 
+                className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 md:p-8 hover:bg-white/10 
                            transition-all duration-300 hover:-translate-y-1 hover:scale-102 cursor-pointer
                            border border-white/5 hover:border-white/10"
                 onClick={() => window.location.href = 'mailto:robertobendi@outlook.it'}
@@ -48,7 +48,7 @@ function Contact() {
 
               {/* Discord Container */}
               <div 
-                className="group bg-white/5 backdrop-blur-sm rounded-xl p-8 hover:bg-white/10 
+                className="group bg-white/5 backdrop-blur-sm rounded-xl p-6 md:p-8 hover:bg-white/10 
                            transition-all duration-300 hover:-translate-y-1 hover:scale-102
                            border border-white/5 hover:border-white/10"
               >

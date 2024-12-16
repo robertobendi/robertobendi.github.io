@@ -108,13 +108,9 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 lg:pt-40">
           {/* Hero Section */}
           <div className="text-center max-w-3xl mx-auto" style={{ animation: 'fadeInUp 1s ease-out' }}>
-            <div className="mb-6 flex items-center justify-center space-x-2">
-              <Command className="w-8 h-8 text-blue-400" />
-              <span className="text-xl text-blue-400">robendi.com</span>
-            </div>
             <h1 className="text-5xl lg:text-7xl font-bold mb-6">
               <span className="gradient-text">Digital</span>{" "}
-              <span className="text-white">Innovation</span>
+              <span className="text-white">Innovations</span>
             </h1>
             <h2 className="text-xl lg:text-2xl text-blue-400 font-semibold mb-6">
               Transforming Ideas into Digital Reality
@@ -147,7 +143,7 @@ function Home() {
             {/* Stats Section */}
             <div className="flex justify-center items-center space-x-8 mb-16">
               <div className="text-center floating-element">
-                <div className="text-3xl font-bold gradient-text mb-1">100+</div>
+                <div className="text-3xl font-bold gradient-text mb-1">25+</div>
                 <div className="text-sm text-gray-400">Projects Delivered</div>
               </div>
               <div className="text-center floating-element" style={{ animationDelay: '0.2s' }}>
