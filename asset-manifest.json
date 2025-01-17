@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.eb9a18f6.css",
-    "main.js": "/static/js/main.22190d03.js",
-    "static/media/logo.png": "/static/media/logo.4c828049bcef4902877b.png",
-    "index.html": "/index.html",
-    "main.eb9a18f6.css.map": "/static/css/main.eb9a18f6.css.map",
-    "main.22190d03.js.map": "/static/js/main.22190d03.js.map"
+    "main.css": "/robendi.com/static/css/main.eb9a18f6.css",
+    "main.js": "/robendi.com/static/js/main.7b8a0246.js",
+    "static/media/logo.png": "/robendi.com/static/media/logo.4c828049bcef4902877b.png",
+    "index.html": "/robendi.com/index.html",
+    "main.eb9a18f6.css.map": "/robendi.com/static/css/main.eb9a18f6.css.map",
+    "main.7b8a0246.js.map": "/robendi.com/static/js/main.7b8a0246.js.map"
   },
   "entrypoints": [
     "static/css/main.eb9a18f6.css",
-    "static/js/main.22190d03.js"
+    "static/js/main.7b8a0246.js"
   ]
 }
