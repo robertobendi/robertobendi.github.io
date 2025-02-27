@@ -22,7 +22,7 @@ const Projects = () => {
     {
       title: "RePlate",
       description: "A minimal, modern React.js template designed to jumpstart web projects. Features a clean, well-organized foundation with essential components pre-configured, including responsive navigation, modern footer, and contact form. Implements best practices for project structure and developer experience.",
-      technologies: ["React 17", "Tailwind CSS", "PostCSS", "Autoprefixer"],
+      technologies: ["React 18", "Tailwind CSS", "Vite", "Autoprefixer"],
       imageUrl: "https://i.ibb.co/DtX23GJ/image.png",
       liveUrl: "https://github.com/robertobendi/RePlate",
     },
