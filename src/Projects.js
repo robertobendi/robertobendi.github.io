@@ -16,16 +16,31 @@ const Projects = () => {
       title: "LidarXP",
       description: "A cutting-edge VR application transforming LiDAR and video data into interactive 3D environments. Built for Oculus Quest, it enables real-time collaboration across headsets for precise 3D modeling, perfect for accident reconstruction and architectural visualization.",
       technologies: ["Unity", "C#", "Oculus SDK", "LiDAR", "AI Point Cloud Processing", "VR Collaboration"],
-      imageUrl: "https://i.ibb.co/6wPD9KW/Screenshot-2024-12-06-100819.png",
+      imageUrl: "https://i.imgur.com/gieRCpn.png",
       liveUrl: "https://youtu.be/otlmxsq-IIc",
     },
     {
       title: "RePlate",
       description: "A minimal, modern React.js template designed to jumpstart web projects. Features a clean, well-organized foundation with essential components pre-configured, including responsive navigation, modern footer, and contact form. Implements best practices for project structure and developer experience.",
       technologies: ["React 18", "Tailwind CSS", "Vite", "Autoprefixer"],
-      imageUrl: "https://i.ibb.co/DtX23GJ/image.png",
+      imageUrl: "https://i.imgur.com/w1bjJvt.png",
       liveUrl: "https://github.com/robertobendi/RePlate",
     },
+    {
+      title: "ASTER",
+      description: "An AI-powered data analysis tool tailored for reinsurance underwriting. ASTER converts unstructured documents into structured insights, revealing hidden connections and enabling smarter decisions. Features include natural language querying, schema extraction, and automated report generation.",
+      technologies: ["React.js", "Tailwind CSS", "IndexedDB", "Ollama", "Client-side Processing"],
+      imageUrl: "https://i.imgur.com/7EEramC.png",
+      liveUrl: "https://github.com/robertobendi/aster",
+    },
+    {
+      title: "Aether: Privacy-First Event Ticketing",
+      description: "Aether is a decentralized event ticketing system that protects user privacy while ensuring secure, fraud-proof verification. Built on Mina Protocol, it uses zero-knowledge proofs to validate tickets without revealing personal data.",
+      technologies: ["Zero-Knowledge Proofs", "Mina Protocol", "QR Code", "Cryptography", "Decentralized Systems"],
+      imageUrl: "https://i.imgur.com/l3FbvPr.png",
+      liveUrl: "https://github.com/robertobendi/aether",
+    }
+    
   ];
 
   const containerVariants = {
