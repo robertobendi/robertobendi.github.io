@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Home from "./Home";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <meta name="description" content="Personal portfolio of Roberto Bendinelli" />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
+      <ScrollToTop />
       <Navbar />
       <main className="flex-grow">
         <Routes>

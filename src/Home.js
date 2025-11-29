@@ -18,33 +18,33 @@ function Home() {
   const services = [
     {
       icon: <Code2 className="w-6 h-6" />,
-      title: "Web Applications",
-      description: "Custom web solutions with modern frameworks and seamless user experiences",
+      title: "Web Development",
+      description: "I build modern web applications with React, focusing on performance and user experience. No jQuery, I promise.",
     },
     {
       icon: <Smartphone className="w-6 h-6" />,
-      title: "Mobile Apps",
-      description: "Native and cross-platform mobile applications for iOS and Android",
+      title: "Mobile Development",
+      description: "I create mobile apps using React Native and Capacitor. Yes, I know native is faster, but this is more fun.",
     },
     {
       icon: <Laptop className="w-6 h-6" />,
-      title: "Desktop Software",
-      description: "Powerful desktop applications for Windows, macOS, and Linux",
+      title: "Full-Stack Development",
+      description: "I develop complete solutions from frontend to backend. The stack is my playground.",
     },
     {
       icon: <BrainCircuit className="w-6 h-6" />,
-      title: "VR Solutions",
-      description: "Immersive virtual reality experiences and applications",
+      title: "VR & Immersive Tech",
+      description: "I explore virtual reality and immersive experiences. Sometimes I get motion sick, but it's worth it.",
     },
     {
       icon: <Database className="w-6 h-6" />,
-      title: "Backend Systems",
-      description: "Scalable server architecture and database solutions",
+      title: "Backend & APIs",
+      description: "I design and implement scalable backend systems and RESTful APIs. GraphQL? We can talk.",
     },
     {
       icon: <Terminal className="w-6 h-6" />,
-      title: "Technical Consulting",
-      description: "Expert guidance on architecture, technology stack, and best practices",
+      title: "Blockchain & Privacy",
+      description: "I work with blockchain technology and privacy-focused solutions. No, I won't explain how blockchain works.",
     }
   ];
 
@@ -109,15 +109,14 @@ function Home() {
           {/* Hero Section */}
           <div className="text-center max-w-3xl mx-auto" style={{ animation: 'fadeInUp 1s ease-out' }}>
             <h1 className="text-5xl lg:text-7xl font-bold mb-6">
-              <span className="gradient-text">Digital</span>{" "}
-              <span className="text-white">Innovations</span>
+              <span className="gradient-text">Hi, I'm</span>{" "}
+              <span className="text-white">Roberto</span>
             </h1>
             <h2 className="text-xl lg:text-2xl text-blue-400 font-semibold mb-6">
-              Transforming Ideas into Digital Reality
+              Developer & Digital Creator
             </h2>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              Specializing in custom software development, from web and mobile applications 
-              to immersive VR experiences. Solving complex technical challenges with elegant solutions.
+              I build software. Sometimes it works.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <Link
@@ -126,7 +125,7 @@ function Home() {
               >
                 <span className="flex items-center gap-2">
                   <MonitorPlay className="w-5 h-5" />
-                  View Projects
+                  View My Projects
                 </span>
               </Link>
               <Link
@@ -135,7 +134,7 @@ function Home() {
               >
                 <span className="flex items-center gap-2">
                   <MessageSquare className="w-5 h-5" />
-                  Start a Project
+                  Get In Touch
                 </span>
               </Link>
             </div>

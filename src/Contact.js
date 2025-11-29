@@ -22,7 +22,7 @@ function Contact() {
           }`}
         >
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-16 hover:scale-105 transition-transform duration-300">
-            Let's Connect
+            Get In Touch
           </h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -138,7 +138,7 @@ function Contact() {
 
           {/* Fun little message */}
           <p className="text-gray-400 italic mt-12 text-lg">
-            Choose your preferred way to connect! 🚀
+            Feel free to reach out - I promise I'll respond faster than my code compiles! 🚀
           </p>
         </div>
       </div>

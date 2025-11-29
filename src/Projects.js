@@ -6,39 +6,46 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   const projects = [
     {
-      title: "Lhumos Platform",
-      description: "A comprehensive scientific video platform featuring dynamic slide synchronization and integrated file sharing. Built for CECAM and MARVEL, it provides an advanced interface for educational content delivery with playlist management and exercise support.",
-      technologies: ["React", "React Router", "Video.js", "React Slick", "REST API"],
-      imageUrl: "https://dome40.eu/sites/default/files/inline-images/EPFL%20Blog%20Post%202.png",
-      liveUrl: "https://alpha.lhumos.org/",
+      title: "NodePass",
+      description: "A blockchain-based anonymous ticketing system for public transport. Winner at LauzHack (Lausanne Hackathon). Features NFC-based verification using Host Card Emulation, enabling contactless ticket validation while maintaining complete user privacy.",
+      technologies: ["React", "Vite", "Capacitor", "Android", "NFC", "Host Card Emulation", "Blockchain", "Express.js", "Tailwind CSS"],
+      imageUrl: "https://awaystudio.tech/assets/nodepass-Cjs04jx4.png",
+      githubUrl: "https://github.com/robertobendi/anonymousticket",
+    },
+    {
+      title: "Aether: Privacy-First Event Ticketing",
+      description: "A decentralized event ticketing system that protects user privacy while ensuring secure, fraud-proof verification. Built on Mina Protocol, using zero-knowledge proofs to validate tickets without revealing personal data.",
+      technologies: ["Zero-Knowledge Proofs", "Mina Protocol", "QR Code", "Cryptography", "Decentralized Systems"],
+      imageUrl: "https://i.imgur.com/l3FbvPr.png",
+      githubUrl: "https://github.com/robertobendi/aether",
+    },
+    {
+      title: "ASTER",
+      description: "An AI-powered data analysis tool tailored for reinsurance underwriting. Converts unstructured documents into structured insights, revealing hidden connections and enabling smarter decisions. Features natural language querying, schema extraction, and automated report generation.",
+      technologies: ["React.js", "Tailwind CSS", "IndexedDB", "Ollama", "Client-side Processing"],
+      imageUrl: "https://i.imgur.com/7EEramC.png",
+      githubUrl: "https://github.com/robertobendi/aster",
+    },
+    {
+      title: "RePlate",
+      description: "A minimal, modern React.js template to jumpstart web projects. Features a clean, well-organized foundation with essential components pre-configured, including responsive navigation, modern footer, and contact form.",
+      technologies: ["React 18", "Tailwind CSS", "Vite", "Autoprefixer"],
+      imageUrl: "https://i.imgur.com/w1bjJvt.png",
+      githubUrl: "https://github.com/robertobendi/RePlate",
     },
     {
       title: "LidarXP",
-      description: "A cutting-edge VR application transforming LiDAR and video data into interactive 3D environments. Built for Oculus Quest, it enables real-time collaboration across headsets for precise 3D modeling, perfect for accident reconstruction and architectural visualization.",
+      description: "A VR application that transforms LiDAR and video data into interactive 3D environments. Developed for Oculus Quest, it enables real-time collaboration across headsets for precise 3D modeling, perfect for accident reconstruction and architectural visualization.",
       technologies: ["Unity", "C#", "Oculus SDK", "LiDAR", "AI Point Cloud Processing", "VR Collaboration"],
       imageUrl: "https://i.imgur.com/gieRCpn.png",
       liveUrl: "https://youtu.be/otlmxsq-IIc",
     },
     {
-      title: "RePlate",
-      description: "A minimal, modern React.js template designed to jumpstart web projects. Features a clean, well-organized foundation with essential components pre-configured, including responsive navigation, modern footer, and contact form. Implements best practices for project structure and developer experience.",
-      technologies: ["React 18", "Tailwind CSS", "Vite", "Autoprefixer"],
-      imageUrl: "https://i.imgur.com/w1bjJvt.png",
-      liveUrl: "https://github.com/robertobendi/RePlate",
-    },
-    {
-      title: "ASTER",
-      description: "An AI-powered data analysis tool tailored for reinsurance underwriting. ASTER converts unstructured documents into structured insights, revealing hidden connections and enabling smarter decisions. Features include natural language querying, schema extraction, and automated report generation.",
-      technologies: ["React.js", "Tailwind CSS", "IndexedDB", "Ollama", "Client-side Processing"],
-      imageUrl: "https://i.imgur.com/7EEramC.png",
-      liveUrl: "https://github.com/robertobendi/aster",
-    },
-    {
-      title: "Aether: Privacy-First Event Ticketing",
-      description: "Aether is a decentralized event ticketing system that protects user privacy while ensuring secure, fraud-proof verification. Built on Mina Protocol, it uses zero-knowledge proofs to validate tickets without revealing personal data.",
-      technologies: ["Zero-Knowledge Proofs", "Mina Protocol", "QR Code", "Cryptography", "Decentralized Systems"],
-      imageUrl: "https://i.imgur.com/l3FbvPr.png",
-      liveUrl: "https://github.com/robertobendi/aether",
+      title: "Lhumos Platform",
+      description: "A comprehensive scientific video platform featuring dynamic slide synchronization and integrated file sharing. Built for CECAM and MARVEL, with an advanced interface for educational content delivery, playlist management, and exercise support.",
+      technologies: ["React", "React Router", "Video.js", "React Slick", "REST API"],
+      imageUrl: "https://dome40.eu/sites/default/files/inline-images/EPFL%20Blog%20Post%202.png",
+      liveUrl: "https://alpha.lhumos.org/",
     }
     
   ];
@@ -79,10 +86,10 @@ const Projects = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-              Projects Portfolio
+              My Projects
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Exploring the intersection of research, technology, and innovation through transformative digital solutions.
+              Things I've built. Most of them work.
             </p>
           </motion.div>
 
